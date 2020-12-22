@@ -1,9 +1,12 @@
+import React from "react";
 import "./App.css";
+
+import Chat from "./components/Chat";
 
 function App() {
   return (
-    <div>
-      <h1>Drawing web app</h1>
+    <div style={{ margin: "0 30%" }}>
+      <Chat />
     </div>
   );
 }
