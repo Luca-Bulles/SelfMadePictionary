@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 
-function Canvas() {
+function Canvas({ updateImageToSend }) {
   const canvasRef = useRef(null);
   var x = 0;
   var y = 0;
@@ -26,6 +26,8 @@ function Canvas() {
     context.closePath();
 
     canvas.addEventListener("mousemove", draw, false);
+
+    updateImageToSend(canvas.toDataURL());
   };
 
   const draw = (e) => {
@@ -45,6 +47,8 @@ function Canvas() {
     context.lineWidth = 6;
     context.stroke();
     context.closePath();
+
+    updateImageToSend(canvas.toDataURL());
   };
 
   const deactivateDrawing = (e) => {

@@ -1,11 +1,11 @@
 import "./App.css";
-import Canvas from "./components/Canvas";
+import Game from "./components/Game";
 
 function App() {
   return (
     <div>
       <h1>Drawing game</h1>
-      <Canvas />
+      <Game />
     </div>
   );
 }
